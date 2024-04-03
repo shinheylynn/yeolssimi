@@ -1,6 +1,6 @@
 function Login() {
 	return (
-		<div>
+		<div className="border border-black">
 			<div className="text-red-500">login</div>
 		</div>
 	);
