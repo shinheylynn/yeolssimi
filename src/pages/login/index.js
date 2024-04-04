@@ -1,15 +1,8 @@
 import React, { useState } from "react";
+import Auth from "@/src/components/Auth";
 
 function Login() {
 	const [authState, setAuthState] = useState("login");
-	const [id, setId] = useState("");
-	const [email, setEmail] = useState("");
-	const [password, setPassword] = useState("");
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log("Id:", id, "Password:", password);
-	};
 
 	return (
 		<main className="h-iphone15pro w-iphone15pro flex flex-col justify-center items-center border border-red-50 h-2/3">
@@ -34,66 +27,7 @@ function Login() {
 						회원가입
 					</h5>
 				</div>
-
-				{authState === "login" ? (
-					<form
-						className="pt-16 flex flex-col items-center gap-3"
-						method="post"
-						id="loginForm"
-						onSubmit={handleSubmit}
-					>
-						<input
-							className="input-custom"
-							type="text"
-							required
-							onChange={(e) => setId(e.target.value)}
-							placeholder="아이디"
-						/>
-						<input
-							className="input-custom"
-							type="password"
-							required
-							onChange={(e) => setPassword(e.target.value)}
-							placeholder="비밀번호"
-						/>
-						<button className="auth-button" type="submit">
-							로그인
-						</button>
-					</form>
-				) : (
-					<form
-						className="pt-10 flex flex-col items-center gap-3"
-						method="post"
-						id="signupForm"
-						onSubmit={handleSubmit}
-					>
-						<input
-							className="input-custom"
-							type="text"
-							required
-							onChange={(e) => setId(e.target.value)}
-							placeholder="아이디"
-						/>
-						<input
-							className="input-custom"
-							type="email"
-							pattern=".+@example\.com"
-							required
-							onChange={(e) => setEmail(e.target.value)}
-							placeholder="이메일"
-						/>
-						<input
-							className="input-custom"
-							type="password"
-							required
-							onChange={(e) => setPassword(e.target.value)}
-							placeholder="비밀번호"
-						/>
-						<button className="auth-button" type="submit">
-							회원가입
-						</button>
-					</form>
-				)}
+				<Auth authState={authState} setAuthState={setAuthState} />
 			</div>
 		</main>
 	);
