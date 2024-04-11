@@ -13,13 +13,15 @@ const handleLogin = async () => {
 
 function GoogleOauth() {
 	return (
-		<button onClick={handleLogin}>
-			<img
-				// src="public/images/GoogleLogin/png@3x/dark/web_dark_sq_SU@3x.png"
-				className="hover:cursor-pointer"
-				alt="Login with Google"
-			></img>
-		</button>
+		<div className="p-8">
+			<button onClick={handleLogin}>
+				<img
+					src="images/GoogleLogin/png@1x/dark/web_dark_sq_SU@1x.png"
+					className="hover:cursor-pointer"
+					alt="Login with Google"
+				></img>
+			</button>
+		</div>
 	);
 }
 
