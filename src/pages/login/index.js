@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Auth from "@/src/components/Auth";
+import GoogleOauth from "@/src/Oauth/Google";
 
 function Login() {
 	const [authState, setAuthState] = useState("login");
@@ -29,6 +30,7 @@ function Login() {
 				</div>
 				<Auth authState={authState} setAuthState={setAuthState} />
 			</div>
+			<GoogleOauth />
 		</main>
 	);
 }
