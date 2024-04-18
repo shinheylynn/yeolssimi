@@ -6,7 +6,7 @@ function Home() {
 	const [authState, setAuthState] = useState("login");
 
 	return (
-		<main className="h-iphone15pro w-iphone15pro flex flex-col justify-center items-center border border-red-50 h-2/3">
+		<main className="h-iphone15pro w-iphone15pro flex flex-col justify-center items-center border border-red-50">
 			<h1 className="pb-10 text-5xl font-bold text-lightblue">YeolSsiMi</h1>
 
 			<div className="pt-10 bg-grey rounded-lg w-4/5 h-2/5">

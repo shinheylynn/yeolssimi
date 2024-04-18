@@ -6,7 +6,7 @@ import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }) {
 	const router = useRouter();
-	const showNavigation = router.pathname !== "/login";
+	const showNavigation = router.pathname !== "/";
 
 	return (
 		<>
