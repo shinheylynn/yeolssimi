@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import { GoogleAuthProvider, signInWithPopup } from "@firebase/auth";
-import fireStore from "@/src/firebase/firestore";
-import fireAuth from "@/src/firebase/fireAuth";
+import fireStore from "@/src/components/firebase/firestore";
+import fireAuth from "@/src/components/firebase/fireAuth";
 
 const handleLogin = async () => {
 	const provider = new GoogleAuthProvider();
