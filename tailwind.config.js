@@ -16,10 +16,16 @@ module.exports = {
 			width: {
 				iphone15pro: "393px",
 			},
+			spacing: {
+				72: "18rem",
+			},
 			colors: {
+				bggrey: "#F5F5F5",
 				darkgrey: "#1a1a1a",
 				grey: "#595959",
 				lightgrey: "#d9d9d9",
+				darkgrey: "#2F2F2F",
+				blue: "#488CFA",
 				lightblue: "#afc7ee",
 				white: "#F2F2F1",
 			},
