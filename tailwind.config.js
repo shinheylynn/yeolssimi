@@ -12,6 +12,10 @@ module.exports = {
 		extend: {
 			height: {
 				iphone15pro: "852px",
+				100: "100px",
+			},
+			maxHeight: {
+				550: "550px",
 			},
 			width: {
 				iphone15pro: "393px",
@@ -31,5 +35,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require("tailwind-scrollbar-hide")],
 };

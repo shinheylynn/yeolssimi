@@ -20,6 +20,12 @@ body {
 	display: flex;
 }
 
+.selected-nav-bg {
+	width: 100%;
+	background-color: #f5f5f5;
+	padding-left: 1.25rem;
+}
+
 .underline-custom {
 	text-decoration: underline;
 	text-decoration-color: #afc7ee;
