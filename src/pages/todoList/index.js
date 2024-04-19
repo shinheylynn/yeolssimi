@@ -9,7 +9,7 @@ function TodoList() {
 	return (
 		<div className="selected-nav-bg">
 			<Link
-				href="/calendar"
+				href="/monthly"
 				className="mt-5 gap-2 flex items-center justify-center h-12 w-12"
 			>
 				<ArrowIcon />

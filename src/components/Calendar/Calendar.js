@@ -1,7 +1,7 @@
 function Calendar() {
 	return (
 		<div>
-			<div>calendar</div>
+			<div>Calendar</div>
 		</div>
 	);
 }
