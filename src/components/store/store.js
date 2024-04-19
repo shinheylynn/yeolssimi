@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const useStore = create((set) => ({
-	selected: "todo",
+	selected: "TODO",
 	setSelected: (link) => set(() => ({ selected: link })),
 
 	isChecked: false,

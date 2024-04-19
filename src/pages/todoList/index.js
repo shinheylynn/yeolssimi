@@ -24,7 +24,10 @@ function TodoList() {
 			<section className="flex items-center gap-1 mt-6">
 				<div>달성률:</div>
 				<div className="font-bold text-2xl text-lightblue">70%</div>
-				<Link href="" className="ml-auto mr-5 font-bold text-sm">
+				<Link
+					href="/todoList/achievements"
+					className="ml-auto mr-5 font-bold text-sm"
+				>
 					카테고리 별 달성률 {">"}
 				</Link>
 			</section>
