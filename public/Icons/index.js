@@ -9,6 +9,7 @@ import UserGroupIcon from "./UserGroupIcon";
 import UserIcon from "./UserIcon";
 import UserIconSolid from "./UserIconSolid";
 import ArrowIcon from "./ArrowIcon";
+import PlusIcon from "./PlusIcon";
 
 export {
 	LogoutIcon,
@@ -22,4 +23,5 @@ export {
 	UserIcon,
 	UserIconSolid,
 	ArrowIcon,
+	PlusIcon,
 };
