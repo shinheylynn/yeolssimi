@@ -1,28 +1,26 @@
-import useStore from "../store/store";
+import useStore from "../Store/store";
 
-function TodoItem() {
-	const { isChecked, toggleCheck } = useStore((state) => ({
-		isChecked: state.isChecked,
-		toggleCheck: state.toggleCheck,
-	}));
+function TodoItem({ id }) {
+	const todo = useStore((state) => state.todos.find((t) => t.id === id));
+	const toggleCheck = useStore((state) => () => state.toggleCheck(id));
 
 	return (
 		<div
-			className={`h-24 rounded-3xl flex ${
-				isChecked ? "bg-darkgrey text-white" : "bg-lightblue"
+			className={`flex-shrink-0 h-24 rounded-3xl flex ${
+				todo.checked ? "bg-darkgrey text-white" : "bg-lightblue"
 			}`}
 		>
 			<section className="ml-3">
 				<div
-					className={`text-xs  mt-3 p-1 px-3 rounded-3xl w-fit h-auto ${
-						isChecked ? "bg-grey text-white" : "bg-white"
+					className={`text-xs mt-3 p-1 px-3 rounded-3xl w-fit h-auto ${
+						todo.checked ? "bg-grey text-white" : "bg-white"
 					}`}
 				>
-					카테고리
+					{todo.category}
 				</div>
 
-				<h5 className={`ml-1 mt-2 ${isChecked ? "line-through" : ""}`}>
-					투두 아이템
+				<h5 className={`ml-1 mt-2 ${todo.checked ? "line-through" : ""}`}>
+					{todo.text}
 				</h5>
 			</section>
 
@@ -30,7 +28,7 @@ function TodoItem() {
 				<input
 					type="checkbox"
 					className="ml-auto mr-5 w-6"
-					checked={isChecked}
+					checked={todo.checked}
 					onChange={toggleCheck}
 				/>
 			</section>

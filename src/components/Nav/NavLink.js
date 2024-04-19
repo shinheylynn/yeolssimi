@@ -1,4 +1,4 @@
-import useStore from "../store/store";
+import useStore from "../Store/store";
 import Link from "next/link";
 import { NAV_LINKS, NAV_CATEGORIES } from "./NavConstants";
 

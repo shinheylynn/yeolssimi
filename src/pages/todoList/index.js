@@ -1,8 +1,11 @@
 import Link from "next/link";
-import { ArrowIcon, CalendarIcon } from "@/public/Icons";
+import useStore from "@/src/components/Store/store";
 import TodoItem from "@/src/components/TodoItem/TodoItem";
+import { ArrowIcon, CalendarIcon } from "@/public/Icons";
 
 function TodoList() {
+	const todos = useStore((state) => state.todos);
+
 	return (
 		<div className="selected-nav-bg">
 			<Link
@@ -32,8 +35,10 @@ function TodoList() {
 				</Link>
 			</section>
 
-			<section className="mr-5 mt-5">
-				<TodoItem />
+			<section className="max-h-550 overflow-y-auto scrollbar-hide flex flex-col gap-3 mr-5 mt-5">
+				{todos.map((todo) => (
+					<TodoItem key={todo.id} id={todo.id} />
+				))}
 			</section>
 		</div>
 	);
