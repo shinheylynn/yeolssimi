@@ -13,7 +13,7 @@ export default function App({ Component, pageProps }) {
 			<Head>
 				<title>YeolSsiMi</title>
 			</Head>
-			{showNavigation && <Navigation />}
+			{showNavigation && <Navigation className="flex" />}
 			<Component {...pageProps} />
 		</>
 	);

@@ -17,6 +17,7 @@ body {
 	min-width: 393px;
 	min-height: 852px;
 	overflow: auto;
+	display: flex;
 }
 
 .underline-custom {
