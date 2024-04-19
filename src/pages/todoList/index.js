@@ -1,7 +1,7 @@
 import Link from "next/link";
 import useStore from "@/src/components/Store/store";
 import TodoItem from "@/src/components/TodoItem/TodoItem";
-import { ArrowIcon, CalendarIcon } from "@/public/Icons";
+import { ArrowIcon, CalendarIcon, PlusIcon } from "@/public/Icons";
 
 function TodoList() {
 	const todos = useStore((state) => state.todos);
@@ -40,6 +40,15 @@ function TodoList() {
 					<TodoItem key={todo.id} id={todo.id} />
 				))}
 			</section>
+
+			<Link
+				href="/todoList/goals"
+				className="shadow-xl absolute bottom-5 right-20 w-14 h-14 flex items-center justify-center rounded-full bg-white"
+			>
+				<div className="w-5 h-5">
+					<PlusIcon />
+				</div>
+			</Link>
 		</div>
 	);
 }
